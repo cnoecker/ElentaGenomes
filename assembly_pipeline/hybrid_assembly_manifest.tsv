@@ -1,0 +1,22 @@
+# mgs_manifest.tsv v 0.021				
+# Instructions: Do Not Edit in Excel!!! Adjust user settings as desired and list samples in the Sample List section below. Do not add or remove lines from this file. Only use Letters, Numbers,  and UnderScores to describe samples.			
+				
+############ User Settings #########################################################################################################################				
+#Variable	Explanation			
+ReadDir=$HOME/hybrid_assembly/combined_read_files/ #A folder containing all of your reads in fastq.gz format			
+WorkDir=mgs_XXXXXXXXXX	#The temporary working location stored on the worker node, this should generally be in /scratch and _XXXXXX will be replaced with a series of random letters			
+OutDir=$HOME/hybrid_assemblies/v2redos_2023-06/	#An absolute path to the directory where you would like your outputs			
+BUSCO_DATA_PATH=shared_resources/databases/BUSCO/busco-data.ezlab.org/v5/data/
+REF_GENOME_COMPARE=$HOME/isolate_nanopore/ref_genomes/GCF_000024265.1_ASM2426v1_genomic.fna # Reference genome to compare with (not currently used)
+MEDAKA_CONSENSUS_MODEL=r1041_e82_400bps_hac_g632
+MEDAKA_VARIANT_MODEL=r1041_e82_400bps_hac_variant_g632
+NANOPORE_FILTER=FALSE
+NANOPORE_FIRST_CUTOFF=1000000 ## If there are 
+
+############ Sample List #########################################################################################################################				
+# Sample ID that will be used as the prefix for all output files	R1 of library 1	R2 of library 1	R1 of library 1	R2 of library 1
+SampleID	R1_L1	R2_L1	Nanopore1	Nanopore2
+HS109-2A	HS109-2A_combined_1.fastq.gz	HS109-2A_combined_2.fastq.gz	HS109-2A_nanopore2023-05-31.fastq	
+HS110-1A	HS110-1A_combined_1.fastq.gz	HS110-1A_combined_2.fastq.gz	HS110-1A_nanopore2023-05-31.fastq	
+HS66-2A	HS66-2A_combined_1.fastq.gz	HS66-2A_combined_2.fastq.gz	HS66-2A_nanopore2023-05-31.fastq	
+OP24wE3	OP24wE3_combined_1.fastq.gz	OP24wE3_combined_2.fastq.gz	OP24wE3_nanopore2023-06-06.fastq	
